@@ -1,0 +1,56 @@
+body {
+    background-color: #e3e3e3;
+}
+.navbar.navbar-inverse {border-radius: 0}
+
+.container-full {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container-full.headline {
+    background-size: cover;
+    background-image: url('../images/ships.jpg');
+    background-color: black;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: -20px;
+    padding: 90px 0;
+    border: 1px solid black;
+}
+
+
+#rowIndex .form-holder.first {
+    margin-left: -100px;
+    -webkit-transform: translate(100px, 0);
+    -o-transform: translate(100px, 0);
+    transform: translate(100px, 0);
+    -webkit-transition-timing-function: cubic-bezier(0.51, 0.01, 0.37, 0.98);
+    -o-transition-timing-function: cubic-bezier(0.51, 0.01, 0.37, 0.98);
+    -webkit-transition-duration: 800ms,700ms;
+    -o-transition-duration: 800ms,700ms;
+    transition-duration: 800ms,700ms;
+    -webkit-transition-property: opacity,-webkit-transform;
+    -o-transition-property: opacity,-o-transform;
+    transition-property: opacity,transform;
+}
+
+#rowIndex .form-holder.second {
+    margin-right: -100px;
+    -webkit-transform: translate(-100px, 0);
+    -o-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
+    -webkit-transition-timing-function: cubic-bezier(0.51, 0.01, 0.37, 0.98);
+    -o-transition-timing-function: cubic-bezier(0.51, 0.01, 0.37, 0.98);
+    -webkit-transition-duration: 800ms,700ms;
+    -o-transition-duration: 800ms,700ms;
+    transition-duration: 800ms,700ms;
+    -webkit-transition-property: opacity,-webkit-transform;
+    -o-transition-property: opacity,-o-transform;
+    transition-property: opacity,transform;
+}
+
+#rowIndex .form-holder .panel {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
