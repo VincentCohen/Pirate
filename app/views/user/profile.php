@@ -20,16 +20,17 @@
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Last seen</strong></span> Yesterday</li>
                 <li class="list-group-item text-right"><span class="pull-left"><strong>Real name</strong></span> <?= $user->username;?></li>
             </ul>
-            <ul class="list-group">
-                <li class="list-group-item text-muted">Stats <i class="fa fa-dashboard fa-1x"></i></li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Kills</strong></span> 125</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Raids</strong></span> 13</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Quests</strong></span> 37</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Crew</strong></span> 78</li>
-            </ul>
+
         </div><!--/col-3-->
 
         <div class="col-sm-9">
+            <ul class="list-inline col-xs-12" id="skills">
+                <li class="col-sm-3 button text-center"><strong>Kills</strong>125</li>
+                <li class="col-xs-3 button text-center"><strong>Raids</strong>13</li>
+                <li class="col-xs-3 button text-center"><strong>Quests</strong>37</li>
+                <li class="col-xs-3 button text-center"><strong>Crew</strong>78</li>
+            </ul>
+
             <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
                 <li class="active"><a href="#activity" data-toggle="tab">Activity</a></li>
                 <li><a href="#messages" data-toggle="tab">Messages</a></li>
