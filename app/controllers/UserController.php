@@ -4,6 +4,8 @@ class UserController extends BaseController {
 
     protected $user;
 
+    protected $layout = 'layouts.user';
+
     public function __construct(UserRepositoryInterface $user)
     {
         $this->user = $user;
@@ -27,14 +29,17 @@ class UserController extends BaseController {
 
     public function read($username)
     {
-        if ($user = $this->user->findByUsername($username))
+        $user = $this->user->findByUsername($username);
+        if (!$user)
         {
-            var_dump($user);
+            Session::flash('message', array('type' => 'danger', 'text' => 'User not found!'));
+
+            return Redirect::to('/');
         }
-        else
-        {
-            echo 'user not found';
-        }
+
+        $params = array('user'=> $user,'auth' => Auth::viaRemember());
+
+        $this->layout->content = View::make('user.profile', $params);
     }
 
     public function authenticate()
@@ -42,12 +47,12 @@ class UserController extends BaseController {
         if ($auth = Auth::attempt(array('username' => Input::get('username'), 'password'=> Input::get('password')), true))
         {
             Session::flash('message', array('type' => 'success', 'text' => 'You succesfully loggedin!'));
-        }
-        else
-        {
-            Session::flash('message', array('type' => 'danger', 'text' => 'You failed logging in!'));
+
+            return Redirect::to('/user/'.Auth::user()->username);
         }
 
-        return Redirect::to('/');
+        Session::flash('message', array('type' => 'danger', 'text' => 'You failed logging in!'));
+
+        return Redirect::to('/user');
     }
 }

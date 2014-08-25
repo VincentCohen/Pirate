@@ -19,6 +19,12 @@ body {
     border: 1px solid black;
 }
 
+.container.profile {
+    border-radius: 4px;
+    position: relative;
+    background: rgba(255,255,255, 0.9);
+    top: -111px;
+}
 
 #rowIndex .form-holder.first {
     margin-left: -100px;
