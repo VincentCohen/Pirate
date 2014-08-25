@@ -16,3 +16,4 @@ Route::get('/', 'HomeController@showWelcome');
 Route::get('/user/{username}', 'UserController@read');
 Route::get('/login', 'UserController@authenticate');
 Route::post('/login', 'UserController@authenticate');
+Route::post('/register', 'UserController@create');

@@ -9,6 +9,22 @@ class UserController extends BaseController {
         $this->user = $user;
     }
 
+    public function create()
+    {
+        $user = $this->user;
+
+        if ($user->create(Input::all()))
+        {
+            Session::flash('message', array('type' => 'success', 'text' => 'Oi! Privateer, enjoy thy quest'));
+        }
+        else
+        {
+            Session::flash('message', array('type' => 'danger', 'text' => 'Arrr! You filthy landlubber failed registration.'));
+        }
+
+        return Redirect::to('/');
+    }
+
     public function read($username)
     {
         if ($user = $this->user->findByUsername($username))

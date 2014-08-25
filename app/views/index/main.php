@@ -3,7 +3,7 @@
         <div class="col-md-4 form-holder first">
             <div class="panel panel-primary">
                 <div class="panel-heading">Register</div>
-                <form class="form-horizontal panel-body" method="post">
+                <form class="form-horizontal panel-body" method="post" action="register">
                     <fieldset>
                         <div class="form-group">
                             <div class="col-md-10 col-md-offset-1">
