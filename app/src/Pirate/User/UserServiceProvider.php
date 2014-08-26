@@ -13,7 +13,7 @@ class PostServiceProvider extends ServiceProvider {
         });
 
         $this->app->bind('Pirate\User\UserRepositoryInterface', function($app) {
-            return new EloquentPostRepository(
+            return new EloquentUserRepository(
                 $app->make('Pirate\User\Entity\User')
             );
         });
