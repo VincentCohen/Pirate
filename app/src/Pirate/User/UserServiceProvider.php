@@ -1,7 +1,7 @@
 <?php namespace Pirate\User;
 
 use Illuminate\Support\ServiceProvider;
-use Entity\EloquentPostRepository;
+use Entity\EloquentUserRepository;
 use Entity\User;
 
 class PostServiceProvider extends ServiceProvider {
