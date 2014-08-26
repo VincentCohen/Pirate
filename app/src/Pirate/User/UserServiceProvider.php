@@ -4,7 +4,7 @@ use Illuminate\Support\ServiceProvider;
 use Entity\EloquentUserRepository;
 use Entity\User;
 
-class PostServiceProvider extends ServiceProvider {
+class UserServiceProvider extends ServiceProvider {
 
     public function register()
     {
