@@ -1,5 +1,7 @@
 <?php
 
+use Pirate\User\UserRepositoryInterface;
+
 class HomeController extends BaseController {
 
     protected $user;

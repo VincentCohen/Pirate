@@ -44,15 +44,17 @@ class UserController extends BaseController {
 
     public function authenticate()
     {
-        if ($auth = Auth::attempt(array('username' => Input::get('username'), 'password'=> Input::get('password')), true))
-        {
-            Session::flash('message', array('type' => 'success', 'text' => 'You succesfully loggedin!'));
+        $auth = Auth::attempt(array('username' => Input::get('username'), 'password'=> Input::get('password')), true);
 
-            return Redirect::to('/user/'.Auth::user()->username);
+        if (!$auth)
+        {
+            Session::flash('message', array('type' => 'danger', 'text' => 'You failed logging in!'));
+
+            return Redirect::to('/');
         }
 
-        Session::flash('message', array('type' => 'danger', 'text' => 'You failed logging in!'));
+        Session::flash('message', array('type' => 'success', 'text' => 'You succesfully loggedin!'));
 
-        return Redirect::to('/user');
+        return Redirect::to('/user/'.Auth::user()->username);
     }
 }

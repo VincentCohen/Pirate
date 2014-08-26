@@ -1,8 +1,8 @@
 <?php namespace Pirate\User;
 
 use Illuminate\Support\ServiceProvider;
-use Entity\EloquentUserRepository;
-use Entity\User;
+use Pirate\User\Entity\EloquentUserRepository;
+use Pirate\User\Entity\User;
 
 class UserServiceProvider extends ServiceProvider {
 

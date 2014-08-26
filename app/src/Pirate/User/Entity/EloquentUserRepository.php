@@ -1,4 +1,6 @@
-<?php
+<?php namespace Pirate\User\Entity;
+
+use Pirate\User\UserRepositoryInterface;
 
 class EloquentUserRepository implements UserRepositoryInterface
 {
