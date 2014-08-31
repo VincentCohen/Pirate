@@ -32,4 +32,20 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         $this->attributes['password'] = Hash::make($password);
     }
 
+    public function isBannable()
+    {
+        return false;
+    }
+
+    public function setBan()
+    {
+        // some stuff
+        return true;
+    }
+
+    public function isBanned()
+    {
+        return false;
+    }
+
 }

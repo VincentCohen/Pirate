@@ -1,5 +1,7 @@
 <?php
-// https://medium.com/laravel-4/laravel-4-authentication-e8d93c9ce0e2
+
+use Pirate\User\UserRepositoryInterface;
+
 class UserController extends BaseController {
 
     protected $user;
