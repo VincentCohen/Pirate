@@ -17,5 +17,10 @@ class UserServiceProvider extends ServiceProvider {
                 $app->make('Pirate\User\Entity\User')
             );
         });
+
+//      this doesnt work somehow..
+//        $this->app->bind('Pirate\User\UserService', function() {
+//            return new UserService;
+//        });
     }
 }

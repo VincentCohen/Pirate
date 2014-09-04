@@ -1,13 +1,10 @@
-<?php namespace Pirate\User;
+<?php namespace Pirate\User\Service;
 
-Class BanUserService {
+use Pirate\User\UserRepositoryInterface;
 
-    protected $user;
+trait BanUserService {
 
-    public function __construct(UserRepositoryInterface $repository)
-    {
-        $this->user = $repository;
-    }
+
 
     public function banUser()
     {
@@ -26,6 +23,5 @@ Class BanUserService {
             $this->user->setBan(0);
         }
     }
-
 
 }

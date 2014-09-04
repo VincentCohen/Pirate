@@ -6,13 +6,19 @@ class HomeController extends BaseController {
 
     protected $user;
 
-    public function __construct(UserRepositoryInterface $user)
+    public function __construct(Pirate\User\UserService $user)
     {
         $this->user = $user;
+
     }
 
 	public function showWelcome()
 	{
+        $map = $this->user->getUserMap();
+
+        dd ($map);
+
+        die;
         if(!Auth::check())
         {
             Redirect::to('/login');
